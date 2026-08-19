@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "author": "Jaya",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-7segment", "id": "disp1", "top": -100, "left": 300, "attrs": { "common": "cathode" } },
+    { "type": "wokwi-pushbutton", "id": "btn1", "top": 150, "left": 350, "attrs": { "color": "green" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": 200, "left": 400, "attrs": { "value": "10000" } },
+    { "type": "wokwi-resistor", "id": "ra", "top": -150, "left": 250, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "rb", "top": -130, "left": 250, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "rc", "top": -110, "left": 250, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "rd", "top": -90, "left": 250, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "re", "top": -70, "left": 250, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "rf", "top": -50, "left": 250, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "rg", "top": -30, "left": 250, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    [ "uno:2", "ra:1", "green", [] ],
+    [ "ra:2", "disp1:A", "green", [] ],
+
+    [ "uno:3", "rb:1", "blue", [] ],
+    [ "rb:2", "disp1:B", "blue", [] ],
+
+    [ "uno:4", "rc:1", "yellow", [] ],
+    [ "rc:2", "disp1:C", "yellow", [] ],
+
+    [ "uno:5", "rd:1", "orange", [] ],
+    [ "rd:2", "disp1:D", "orange", [] ],
+
+    [ "uno:6", "re:1", "purple", [] ],
+    [ "re:2", "disp1:E", "purple", [] ],
+
+    [ "uno:7", "rf:1", "brown", [] ],
+    [ "rf:2", "disp1:F", "brown", [] ],
+
+    [ "uno:8", "rg:1", "white", [] ],
+    [ "rg:2", "disp1:G", "white", [] ],
+
+    [ "disp1:COM", "uno:GND.1", "black", [] ],
+
+    [ "uno:9", "btn1:1.l", "green", [] ],
+    [ "btn1:2.l", "uno:5V", "red", [] ],
+    [ "uno:9", "r1:1", "black", [] ],
+    [ "r1:2", "uno:GND.2", "black", [] ]
+  ],
+  "dependencies": {}
+}
